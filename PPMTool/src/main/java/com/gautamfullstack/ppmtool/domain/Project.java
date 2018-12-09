@@ -43,7 +43,7 @@ public class Project {
     private Date createdOn;
 
     @JsonFormat(pattern = "yyyy-mm-dd")
-    private Date updateOn;
+    private Date updatedOn;
 
     @PrePersist
     protected void onCreate() {
@@ -52,6 +52,6 @@ public class Project {
 
     @PreUpdate
     protected void onUpdate() {
-        this.updateOn = new Date();
+        this.updatedOn = new Date();
     }
 }

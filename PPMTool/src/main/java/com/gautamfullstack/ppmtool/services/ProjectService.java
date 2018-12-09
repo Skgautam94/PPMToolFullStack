@@ -1,18 +1,18 @@
 package com.gautamfullstack.ppmtool.services;
 
 import com.gautamfullstack.ppmtool.domain.Project;
-
-import java.util.List;
 import java.util.Optional;
 
 public interface ProjectService {
 
-    Project saveOrUpdateProject(Project project);
+    Project saveProject(Project project);
 
-    Optional<Project> getOne(Long id);
+    Optional<Project> findByProjectIdentifier(String projectIdentifier);
 
-    List<Project> getAll();
+    Iterable<Project> findAll();
 
-    void deleteOne(Long id);
+    void deleteProject(String id);
+
+    void updateProject(Project project);
 
 }
